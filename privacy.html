@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — flicpix</title>
+  <meta name="description" content="Read FlicPix's Privacy Policy to understand how we collect, use, and protect your personal data." />
+  <meta property="og:title" content="Privacy Policy — flicpix" />
+  <meta property="og:url" content="https://flicpix.app/privacy" />
+  <link rel="canonical" href="https://flicpix.app/privacy" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #161616;
+      --text: #e0e0e0;
+      --muted: #666;
+      --pink: #e896b0;
+      --blue: #88c8e8;
+      --border: #252525;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,10,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+    }
+    .header-inner {
+      max-width: 700px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 52px;
+    }
+    .logo { font-size: 1.15rem; font-weight: 400; text-decoration: none; letter-spacing: -0.01em; }
+    .logo .flic { color: var(--pink); }
+    .logo .pix  { color: var(--blue); }
+    nav a {
+      font-size: 0.75rem; font-weight: 500; color: var(--muted);
+      text-decoration: none; margin-left: 1.4rem;
+      letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s;
+    }
+    nav a:hover { color: var(--text); }
+    nav a.active { color: var(--blue); }
+    main { max-width: 700px; margin: 0 auto; padding: 3.5rem 1.5rem 6rem; }
+    .hero { margin-bottom: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--border); }
+    h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); font-weight: 300; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 0.7rem; }
+    h1 .flic { color: var(--pink); }
+    h1 .pix  { color: var(--blue); }
+    .hero-meta { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+    section { margin-bottom: 2rem; }
+    h2 {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--pink); margin-bottom: 0.6rem;
+    }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.3rem 1.5rem;
+    }
+    p { color: #b8b8b8; margin-bottom: 0.75rem; }
+    p:last-child { margin-bottom: 0; }
+    a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { opacity: 0.7; }
+    .rule-list { list-style: none; margin-top: 0.5rem; }
+    .rule-list li { position: relative; padding-left: 1.2rem; margin-bottom: 0.45rem; color: #b8b8b8; }
+    .rule-list li::before { content: '–'; position: absolute; left: 0; color: var(--blue); }
+    .highlight-box {
+      background: rgba(232, 150, 176, 0.07);
+      border: 1px solid rgba(232, 150, 176, 0.2);
+      border-radius: 10px;
+      padding: 1.1rem 1.4rem;
+      margin-bottom: 2.5rem;
+    }
+    .highlight-box p { color: #d0a0b8; margin: 0; font-size: 0.9rem; }
+    .callout {
+      background: rgba(136, 200, 232, 0.06); border-left: 2px solid var(--blue);
+      padding: 0.85rem 1.1rem; border-radius: 0 8px 8px 0; margin-top: 1rem;
+    }
+    .callout p { color: #8ab8d0; margin: 0; font-size: 0.88rem; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem; }
+    .footer-inner {
+      max-width: 700px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.5rem;
+    }
+    .footer-inner p { font-size: 0.75rem; color: var(--muted); margin: 0; }
+    .footer-links a { font-size: 0.75rem; color: var(--muted); text-decoration: none; margin-left: 1.2rem; }
+    .footer-links a:hover { color: var(--text); }
+    @media (max-width: 560px) {
+      main { padding: 2.5rem 1.1rem 5rem; }
+      .card { padding: 1rem 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/"><span class="flic">flic</span><span class="pix">pix</span></a>
+    <nav>
+      <a href="/terms">Terms</a>
+      <a href="/privacy" class="active">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <h1><span class="flic">flic</span><span class="pix">pix</span> privacy</h1>
+    <p class="hero-meta">Last updated: June 2026</p>
+  </div>
+
+  <div class="highlight-box">
+    <p>We keep it simple: we collect only what we need, your photos never leave your device, and we will never sell your data. This policy explains the full details.</p>
+  </div>
+
+  <section>
+    <h2>Who we are</h2>
+    <div class="card">
+      <p>FlicPix (<strong>we</strong>, <strong>us</strong>, <strong>our</strong>) is the provider of the FlicPix mobile application and website at <a href="https://flicpix.app">flicpix.app</a> (together, the <strong>Services</strong>). We are the data controller responsible for your personal data.</p>
+      <p>If you have any questions about this policy or how we handle your data, you can contact us at <a href="mailto:support@flicpix.app">support@flicpix.app</a>.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>About this policy</h2>
+    <div class="card">
+      <p>This privacy policy explains how we collect, use, store, and protect your personal data when you use our Services, and tells you about your privacy rights under UK and applicable data protection law.</p>
+      <p>Our Services are not intended for children under the age of 16, and we do not knowingly collect data relating to children.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Your photos stay on your device</h2>
+    <div class="card">
+      <p>FlicPix processes your photos entirely on your device. We do not upload, store, or transmit your photos or camera roll content to our servers. Your media is 100% private to you.</p>
+      <div class="callout">
+        <p>We do not have access to your photos. They never leave your iPhone.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Data we collect</h2>
+    <div class="card">
+      <p>Personal data means any information from which you can be identified. We may collect the following limited categories:</p>
+      <ul class="rule-list">
+        <li><strong>Identity data</strong> — your name and email address if you create an account or contact us.</li>
+        <li><strong>Usage data</strong> — information about how you interact with the App, such as features used, session length, and streak activity. This data is anonymised where possible.</li>
+        <li><strong>Technical data</strong> — device type, operating system version, app version, and crash reports to help us fix bugs and improve performance.</li>
+        <li><strong>Communications data</strong> — if you contact us by email or support channels, we keep a record of that correspondence.</li>
+      </ul>
+      <p style="margin-top:0.75rem">We do not collect sensitive personal data such as financial information, location data, or biometric data.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>How we collect your data</h2>
+    <div class="card">
+      <p>We collect data in the following ways:</p>
+      <ul class="rule-list">
+        <li><strong>Directly from you</strong> — when you create an account, contact support, or interact with the App.</li>
+        <li><strong>Automatically</strong> — through crash reporting and anonymous usage analytics collected by the App.</li>
+        <li><strong>Third-party tools</strong> — we may use privacy-focused analytics tools to understand aggregate usage patterns. These tools do not identify you personally.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>How we use your data</h2>
+    <div class="card">
+      <p>We only use your data when we have a lawful basis to do so. We use it to:</p>
+      <ul class="rule-list">
+        <li>Provide, maintain, and improve the App and our Services.</li>
+        <li>Respond to your support requests and communications.</li>
+        <li>Monitor and fix technical issues, crashes, and bugs.</li>
+        <li>Comply with our legal obligations.</li>
+        <li>Protect the security and integrity of our Services.</li>
+      </ul>
+      <p style="margin-top:0.75rem">We will never use your data for advertising purposes or sell it to third parties.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Legal basis for processing</h2>
+    <div class="card">
+      <p>Under UK data protection law, we rely on the following lawful bases:</p>
+      <ul class="rule-list">
+        <li><strong>Contract</strong> — processing necessary to provide you with the Services you have requested.</li>
+        <li><strong>Legitimate interests</strong> — improving the App, preventing fraud, and ensuring security, where these interests are not overridden by your rights.</li>
+        <li><strong>Legal obligation</strong> — where we are required to process data to comply with the law.</li>
+        <li><strong>Consent</strong> — where we have asked for and you have provided your consent (e.g. marketing communications). You may withdraw consent at any time.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sharing your data</h2>
+    <div class="card">
+      <p>We do not sell, rent, or trade your personal data. We may share it only in these limited circumstances:</p>
+      <ul class="rule-list">
+        <li><strong>Service providers</strong> — trusted third-party companies that help us operate the App (e.g. crash reporting, analytics), bound by strict data processing agreements.</li>
+        <li><strong>Legal requirements</strong> — if required by law, court order, or to protect the rights and safety of our users.</li>
+        <li><strong>Business transfer</strong> — if FlicPix is acquired or merges with another organisation, your data may be transferred as part of that transaction. We will notify you before your data becomes subject to a different privacy policy.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Data retention</h2>
+    <div class="card">
+      <p>We retain your personal data only for as long as necessary to fulfil the purposes for which it was collected, or as required by law. When you delete your account, we will delete or anonymise your personal data within 30 days, except where we are legally required to retain it.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Data security</h2>
+    <div class="card">
+      <p>We take appropriate technical and organisational measures to protect your personal data against unauthorised access, loss, or disclosure. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>International transfers</h2>
+    <div class="card">
+      <p>We primarily store and process data within the UK and European Economic Area (EEA). If we transfer data outside the UK/EEA, we ensure appropriate safeguards are in place in accordance with applicable data protection law.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Your rights</h2>
+    <div class="card">
+      <p>Under UK data protection law, you have the following rights regarding your personal data:</p>
+      <ul class="rule-list">
+        <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
+        <li><strong>Correction</strong> — ask us to correct inaccurate or incomplete data.</li>
+        <li><strong>Erasure</strong> — request that we delete your personal data in certain circumstances.</li>
+        <li><strong>Restriction</strong> — ask us to restrict how we use your data in certain circumstances.</li>
+        <li><strong>Portability</strong> — receive your data in a structured, machine-readable format.</li>
+        <li><strong>Objection</strong> — object to us processing your data where we rely on legitimate interests.</li>
+        <li><strong>Withdraw consent</strong> — where processing is based on consent, withdraw it at any time.</li>
+      </ul>
+      <p style="margin-top:0.75rem">To exercise any of these rights, contact us at <a href="mailto:support@flicpix.app">support@flicpix.app</a>. We will respond within 30 days. You also have the right to lodge a complaint with the <a href="https://ico.org.uk" target="_blank" rel="noopener">Information Commissioner's Office (ICO)</a>.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cookies</h2>
+    <div class="card">
+      <p>Our website may use essential cookies to ensure it functions correctly. We do not use advertising or tracking cookies. You can control cookies through your browser settings.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Third-party links</h2>
+    <div class="card">
+      <p>The App or website may contain links to third-party websites. We are not responsible for the privacy practices of those sites and encourage you to review their privacy policies before providing any personal data.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <div class="card">
+      <p>We may update this privacy policy from time to time. We will notify you of any material changes by updating the date at the top of this page and, where appropriate, notifying you via the App. Continued use of our Services after changes are posted constitutes your acceptance of the updated policy.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact us</h2>
+    <div class="card">
+      <p>If you have any questions, concerns, or requests regarding this privacy policy or your personal data, please contact us at:</p>
+      <p><a href="mailto:support@flicpix.app">support@flicpix.app</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 <span style="color:var(--pink)">flic</span><span style="color:var(--blue)">pix</span></p>
+    <div class="footer-links">
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
