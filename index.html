@@ -32,6 +32,7 @@
       overflow-x: hidden;
     }
     a { color: inherit; text-decoration: none; }
+    img { display: block; }
 
     /* ── Header ── */
     header {
@@ -65,110 +66,117 @@
     /* ── Hero ── */
     .hero {
       max-width: 1100px; margin: 0 auto;
-      padding: 4.5rem 1.5rem 3rem;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 2rem;
+      padding: 4rem 1.5rem 2rem;
+      display: grid; grid-template-columns: 1fr 380px;
+      align-items: center; gap: 2rem;
     }
-    .hero-copy { flex: 1; max-width: 480px; }
+    .hero-copy { max-width: 520px; }
     .hero h1 {
       font-weight: 400;
-      font-size: clamp(2.4rem, 5.5vw, 3.6rem);
-      line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.2rem;
+      font-size: clamp(2.6rem, 5.5vw, 3.8rem);
+      line-height: 1.05; letter-spacing: -0.025em; margin-bottom: 1.3rem;
     }
     .hero h1 .pink { color: var(--pink); }
     .hero h1 .blue { color: var(--blue); }
     .hero p.lead {
-      font-size: 1.05rem; color: #b8b8b8; margin-bottom: 1.8rem; font-weight: 300;
+      font-size: 1.08rem; color: #b8b8b8; margin-bottom: 1.8rem; font-weight: 300;
     }
     .hero-ctas { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
     .cta-primary {
       background: linear-gradient(120deg, var(--pink), var(--blue));
       color: #0a0a0a; font-weight: 700; font-size: 0.95rem;
-      padding: 0.85rem 1.8rem; border-radius: 100px;
+      padding: 0.9rem 1.9rem; border-radius: 100px;
     }
     .cta-secondary {
       border: 1px solid var(--border); color: var(--text);
       font-weight: 500; font-size: 0.95rem;
-      padding: 0.85rem 1.6rem; border-radius: 100px;
+      padding: 0.9rem 1.6rem; border-radius: 100px;
     }
     .hero-badges { display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--muted); }
     .hero-badges span { display: flex; align-items: center; gap: 0.4rem; }
 
-    .hero-phone { flex-shrink: 0; }
-    .hero-phone img {
-      width: 280px; max-width: 100%;
-      filter: drop-shadow(0 30px 60px rgba(232,150,176,0.15));
-    }
+    .hero-phone { justify-self: center; }
+    .hero-phone img { width: 100%; max-width: 380px; }
 
     /* ── Section shared ── */
-    .section { max-width: 1100px; margin: 0 auto; padding: 5rem 1.5rem; }
-    .section-label {
+    .section { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem; }
+    .group-label {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
       text-transform: uppercase; color: var(--pink); margin-bottom: 0.7rem;
       text-align: center;
     }
-    .section-title {
+    .group-title {
       font-weight: 400;
-      font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center;
-      letter-spacing: -0.01em; margin-bottom: 3rem; line-height: 1.2;
+      font-size: clamp(1.9rem, 4vw, 2.7rem); text-align: center;
+      letter-spacing: -0.015em; margin-bottom: 0.8rem; line-height: 1.15;
     }
-    .section-title .pink { color: var(--pink); }
-    .section-title .blue { color: var(--blue); }
+    .group-title .pink { color: var(--pink); }
+    .group-title .blue { color: var(--blue); }
+    .group-sub {
+      text-align: center; color: #a8a8a8; max-width: 600px;
+      margin: 0 auto 3rem; font-size: 1.05rem;
+    }
 
-    /* ── Feature rows ── */
+    /* ── Phone grid (clustered, Picnic-style) ── */
+    .phone-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem; align-items: start;
+    }
+    .phone-grid img { width: 100%; }
+    .phone-grid .lift { margin-top: -2.5rem; }
+    .phone-grid .drop { margin-top: 2.5rem; }
+
+    /* ── Feature rows (for grouped detail) ── */
     .feature-row {
-      display: flex; align-items: center; gap: 3rem;
-      margin-bottom: 6rem;
+      display: grid; grid-template-columns: 1fr 340px;
+      align-items: center; gap: 1rem; margin-bottom: 2.5rem;
     }
     .feature-row:last-child { margin-bottom: 0; }
-    .feature-row.reverse { flex-direction: row-reverse; }
-    .feature-text { flex: 1; }
+    .feature-row.reverse { grid-template-columns: 340px 1fr; }
+    .feature-row.reverse .feature-img { order: -1; }
     .feature-text h3 {
       font-weight: 400;
-      font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; line-height: 1.2;
+      font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 1rem; line-height: 1.2;
     }
     .feature-text h3 .pink { color: var(--pink); }
     .feature-text h3 .blue { color: var(--blue); }
-    .feature-text p { color: #b0b0b0; font-size: 1rem; }
-    .feature-img { flex-shrink: 0; width: 260px; }
-    .feature-img img {
-      width: 100%; border-radius: 28px;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-    }
+    .feature-text p { color: #b0b0b0; font-size: 1.05rem; max-width: 480px; }
+    .feature-img { justify-self: center; }
+    .feature-img img { width: 100%; max-width: 340px; }
 
     /* ── Privacy highlight ── */
     .privacy-band {
       background: var(--surface); border: 1px solid var(--border);
-      border-radius: 20px; padding: 3rem 2.5rem; text-align: center;
-      max-width: 1100px; margin: 0 auto 5rem; 
+      border-radius: 24px; padding: 3.5rem 2.5rem; text-align: center;
+      max-width: 1100px; margin: 0 auto;
     }
     .privacy-band h2 {
       font-weight: 400;
-      font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 1rem;
+      font-size: clamp(1.7rem, 3.5vw, 2.3rem); margin-bottom: 1rem;
     }
     .privacy-band h2 .blue { color: var(--blue); }
-    .privacy-band p { color: #b0b0b0; max-width: 560px; margin: 0 auto; }
-    .privacy-icons { display: flex; justify-content: center; gap: 2.5rem; margin-top: 2rem; flex-wrap: wrap; }
+    .privacy-band p { color: #b0b0b0; max-width: 580px; margin: 0 auto; }
+    .privacy-icons { display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; flex-wrap: wrap; }
     .privacy-icons div { font-size: 0.85rem; color: var(--muted); text-align: center; }
     .privacy-icons .emoji { font-size: 1.8rem; display: block; margin-bottom: 0.4rem; }
 
-    /* ── Logo strip / quote ── */
-    .quote-band { text-align: center; padding: 3rem 1.5rem; }
+    /* ── Quote ── */
+    .quote-band { text-align: center; padding: 4rem 1.5rem; max-width: 760px; margin: 0 auto; }
     .quote-band p {
       font-weight: 400;
-      font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--text);
-      max-width: 700px; margin: 0 auto; line-height: 1.4;
+      font-size: clamp(1.4rem, 3vw, 1.9rem); color: var(--text);
+      line-height: 1.4;
     }
     .quote-band p .pink { color: var(--pink); }
 
     /* ── Final CTA ── */
     .final-cta {
-      text-align: center; padding: 5rem 1.5rem 6rem;
+      text-align: center; padding: 4rem 1.5rem 6rem;
       max-width: 700px; margin: 0 auto;
     }
     .final-cta h2 {
       font-weight: 400;
-      font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; line-height: 1.15;
+      font-size: clamp(2.1rem, 5vw, 3.2rem); margin-bottom: 1rem; line-height: 1.15;
     }
     .final-cta h2 .pink { color: var(--pink); }
     .final-cta h2 .blue { color: var(--blue); }
@@ -185,13 +193,18 @@
     .footer-links a { font-size: 0.8rem; color: var(--muted); margin-left: 1.4rem; }
     .footer-links a:hover { color: var(--text); }
 
-    @media (max-width: 800px) {
-      .hero { flex-direction: column; text-align: center; padding-top: 3rem; }
-      .hero-copy { max-width: 100%; }
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; text-align: center; padding-top: 3rem; gap: 1rem; }
+      .hero-copy { max-width: 100%; margin: 0 auto; }
       .hero-ctas { justify-content: center; }
       .hero-badges { justify-content: center; }
-      .feature-row, .feature-row.reverse { flex-direction: column; text-align: center; gap: 1.5rem; margin-bottom: 4rem; }
-      .feature-img { width: 220px; }
+      .hero-phone img { max-width: 300px; }
+      .phone-grid { grid-template-columns: 1fr; gap: 1rem; max-width: 320px; margin: 0 auto; }
+      .phone-grid .lift, .phone-grid .drop { margin-top: 0; }
+      .feature-row, .feature-row.reverse { grid-template-columns: 1fr; text-align: center; gap: 0.5rem; margin-bottom: 3rem; }
+      .feature-row.reverse .feature-img { order: 0; }
+      .feature-text p { margin: 0 auto; }
+      .feature-img img { max-width: 280px; margin: 0 auto; }
       nav { gap: 1rem; }
       nav a.navlink:not(.btn-download) { display: none; }
     }
@@ -229,14 +242,25 @@
   </div>
 </section>
 
+<!-- ════ SORT ════ -->
 <section class="section" id="features">
-  <div class="section-label">How it works</div>
-  <div class="section-title">Tidy up like it's a <span class="pink">game</span>, not a <span class="blue">chore</span></div>
+  <div class="group-label">Sort</div>
+  <div class="group-title">Tidy up like it's a <span class="pink">game</span>, not a <span class="blue">chore</span></div>
+  <div class="group-sub">Swipe through your photos one by one, keep what matters, and archive the rest. It's like Tinder, but for your camera roll.</div>
 
+  <div class="phone-grid">
+    <img class="lift" src="images/framed_archive.png" alt="Swiping left to archive a photo in flicpix" />
+    <img src="images/framed_keep.png" alt="Swiping right to keep a photo in flicpix" />
+    <img class="lift" src="images/framed_mainswipe.png" alt="Comparing similar photos in flicpix" />
+  </div>
+</section>
+
+<!-- ════ SORT detail rows ════ -->
+<section class="section">
   <div class="feature-row">
     <div class="feature-text">
       <h3>Swipe to <span class="pink">archive</span></h3>
-      <p>It's like Tinder, but for your photos. See each photo full-screen and swipe left on the ones you don't need — old screenshots, blurry duplicates, forgotten memes. No more endless scrolling through a messy grid.</p>
+      <p>See each photo full-screen and swipe left on the ones you don't need — old screenshots, blurry duplicates, forgotten memes. No more endless scrolling through a messy grid.</p>
     </div>
     <div class="feature-img">
       <img src="images/framed_archive.png" alt="Swiping left to archive a photo in flicpix" />
@@ -255,23 +279,57 @@
 
   <div class="feature-row">
     <div class="feature-text">
-      <h3>Rediscover <span class="pink">memories</span></h3>
-      <p>flicpix surfaces similar shots from the same moment so you can compare and pick the best one — and resurfaces forgotten favourites from your past so nothing good gets lost in the noise.</p>
+      <h3>Always keep the <span class="pink">best shot</span></h3>
+      <p>Took five photos of the same moment? Compare similar shots side by side and pick the one you actually want to keep — no more hoarding near-duplicates just because you can't decide.</p>
     </div>
     <div class="feature-img">
-      <img src="images/framed_mainswipe.png" alt="Comparing similar photos in flicpix" />
+      <img src="images/framed_compare.png" alt="Comparing similar photos to pick the best shot in flicpix" />
+    </div>
+  </div>
+</section>
+
+<!-- ════ HAVE FUN ════ -->
+<section class="section">
+  <div class="group-label">Have fun</div>
+  <div class="group-title">Rediscover the <span class="pink">memories</span> that matter</div>
+  <div class="group-sub">Turn organizing into a game. Relive "On this day" moments, sort favourites into albums, and free up space as you go.</div>
+
+  <div class="feature-row">
+    <div class="feature-text">
+      <h3>Rediscover <span class="pink">memories</span></h3>
+      <p>flicpix resurfaces forgotten favourites from your past so nothing good gets lost in the noise — sort through old moments and relive them as you tidy.</p>
+    </div>
+    <div class="feature-img">
+      <img src="images/framed_mainswipe.png" alt="Rediscovering memories in flicpix" />
     </div>
   </div>
 
   <div class="feature-row reverse">
     <div class="feature-text">
-      <h3>Clear your <span class="blue">camera roll</span></h3>
+      <h3>Organize your <span class="blue">favourites</span></h3>
+      <p>Sort the best shots straight into albums as you go — no extra steps, no switching apps. Just swipe, tap, and your favourite memories are exactly where you want them.</p>
+    </div>
+    <div class="feature-img">
+      <img src="images/framed_organise.png" alt="Adding a photo to an album in flicpix" />
+    </div>
+  </div>
+
+  <div class="feature-row">
+    <div class="feature-text">
+      <h3>Clear your <span class="pink">camera roll</span></h3>
       <p>Once you're done swiping, clean up your entire archive in one tap. No more deleting photos one by one — just a single satisfying confirmation, and the space is yours again.</p>
     </div>
     <div class="feature-img">
       <img src="images/framed_clearcameraroll.png" alt="Confirming deletion to free up storage in flicpix" />
     </div>
   </div>
+</section>
+
+<!-- ════ REPEAT ════ -->
+<section class="section">
+  <div class="group-label">Repeat</div>
+  <div class="group-title">Build a <span class="blue">habit</span> that sticks</div>
+  <div class="group-sub">Keep your library organized for good — set reminders, build a streak, and watch your progress add up day by day.</div>
 
   <div class="feature-row">
     <div class="feature-text">
@@ -292,28 +350,9 @@
       <img src="images/framed_streak.png" alt="Streak calendar tracking daily progress in flicpix" />
     </div>
   </div>
-
-  <div class="feature-row">
-    <div class="feature-text">
-      <h3>Organize your <span class="pink">favourites</span></h3>
-      <p>Sort the best shots straight into albums as you go — no extra steps, no switching apps. Just swipe, tap, and your favourite memories are exactly where you want them.</p>
-    </div>
-    <div class="feature-img">
-      <img src="images/framed_organise.png" alt="Adding a photo to an album in flicpix" />
-    </div>
-  </div>
-  <div class="feature-row">
-    <div class="feature-text">
-      <h3>Always keep the <span class="pink">best shot</span></h3>
-      <p>Took five photos of the same moment? Compare similar shots side by side and pick the one you actually want to keep — no more hoarding near-duplicates just because you can't decide.</p>
-    </div>
-    <div class="feature-img">
-      <img src="images/framed_compare.png" alt="Comparing similar photos to pick the best shot in flicpix" />
-    </div>
-  </div>
-
 </section>
 
+<!-- ════ PRIVACY ════ -->
 <section class="section" id="privacy">
   <div class="privacy-band">
     <h2>Your photos stay <span class="blue">private</span>, always</h2>
