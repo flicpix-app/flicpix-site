@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — flicpix</title>
+  <meta name="description" content="Get help with flicpix. Find answers to common questions or contact our support team." />
+  <meta property="og:title" content="Support — flicpix" />
+  <meta property="og:url" content="https://flicpix.app/support" />
+  <link rel="canonical" href="https://flicpix.app/support" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #161616;
+      --text: #e0e0e0;
+      --muted: #666;
+      --pink: #e896b0;
+      --blue: #88c8e8;
+      --border: #252525;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,10,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+    }
+    .header-inner {
+      max-width: 700px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 52px;
+    }
+    .logo { font-size: 1.15rem; font-weight: 400; text-decoration: none; letter-spacing: -0.01em; }
+    .logo .flic { color: var(--pink); }
+    .logo .pix  { color: var(--blue); }
+    nav a {
+      font-size: 0.75rem; font-weight: 500; color: var(--muted);
+      text-decoration: none; margin-left: 1.4rem;
+      letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s;
+    }
+    nav a:hover { color: var(--text); }
+    nav a.active { color: var(--blue); }
+    main { max-width: 700px; margin: 0 auto; padding: 3.5rem 1.5rem 6rem; }
+    .hero { margin-bottom: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--border); }
+    h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); font-weight: 300; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 0.7rem; }
+    h1 .flic { color: var(--pink); }
+    h1 .pix  { color: var(--blue); }
+    .hero p { color: #b8b8b8; font-size: 1.02rem; }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 1.8rem 1.6rem; margin-bottom: 3rem;
+      text-align: center;
+    }
+    .contact-card h2 { font-size: 1.2rem; font-weight: 400; margin-bottom: 0.5rem; }
+    .contact-card p { color: #b0b0b0; margin-bottom: 1.2rem; font-size: 0.95rem; }
+    .contact-btn {
+      display: inline-block;
+      background: linear-gradient(120deg, var(--pink), var(--blue));
+      color: #0a0a0a; font-weight: 500; font-size: 0.95rem;
+      padding: 0.7rem 1.8rem; border-radius: 100px; text-decoration: none;
+    }
+    .contact-note { font-size: 0.82rem; color: var(--muted); margin-top: 1rem; }
+
+    /* FAQ */
+    h2.section-heading {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--pink); margin-bottom: 1.2rem;
+    }
+    .faq-item {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.2rem 1.4rem; margin-bottom: 0.8rem;
+    }
+    .faq-item h3 { font-size: 1.02rem; font-weight: 500; margin-bottom: 0.4rem; color: var(--text); }
+    .faq-item p { color: #b0b0b0; margin: 0; }
+    .faq-item a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+    .faq-item a:hover { opacity: 0.7; }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem; margin-top: 3rem; }
+    .footer-inner {
+      max-width: 700px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.5rem;
+    }
+    .footer-inner p { font-size: 0.75rem; color: var(--muted); margin: 0; }
+    .footer-links a { font-size: 0.75rem; color: var(--muted); text-decoration: none; margin-left: 1.2rem; }
+    .footer-links a:hover { color: var(--text); }
+
+    @media (max-width: 560px) {
+      main { padding: 2.5rem 1.1rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/"><span class="flic">flic</span><span class="pix">pix</span></a>
+    <nav>
+      <a href="/support" class="active">Support</a>
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <h1><span class="flic">flic</span><span class="pix">pix</span> support</h1>
+    <p>Need a hand? Find answers to common questions below, or get in touch and we'll be happy to help.</p>
+  </div>
+
+  <div class="contact-card">
+    <h2>Get in touch</h2>
+    <p>Have a question, found a bug, or want to suggest a feature? We'd love to hear from you.</p>
+    <a class="contact-btn" href="mailto:support@flicpix.app">Email support@flicpix.app</a>
+    <p class="contact-note">We aim to reply within 1–2 business days.</p>
+  </div>
+
+  <h2 class="section-heading">Frequently asked questions</h2>
+
+  <div class="faq-item">
+    <h3>How does flicpix work?</h3>
+    <p>flicpix shows your photos one at a time, full-screen. Swipe right to keep a photo, or left to archive it. When you're done, you can clear everything you've archived in a single tap to free up storage.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Are my photos private?</h3>
+    <p>Yes. flicpix works entirely on your device. Your photos never leave your iPhone — we don't upload, store, or have access to your media. You can read more in our <a href="/privacy">Privacy Policy</a>.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can I undo a mistake?</h3>
+    <p>Absolutely. If you archive a photo by accident, just tap undo to bring it back. Nothing is permanently removed until you confirm deletion, so you're always in control.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Does archiving a photo delete it?</h3>
+    <p>Not right away. Archiving moves a photo into your archive list. Photos are only removed from your library when you choose to clear the archive and confirm deletion.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What are streaks and daily challenges?</h3>
+    <p>To make cleanup a habit, flicpix lets you build a daily streak by sorting a set number of photos each day. You can turn reminders on or off anytime in the app's notification settings.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How do I free up storage?</h3>
+    <p>As you swipe and archive photos you no longer need, flicpix tracks how much space you'll reclaim. Tap to clear your archive and confirm, and that storage is freed up on your device.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>I have another question</h3>
+    <p>No problem — just email us at <a href="mailto:support@flicpix.app">support@flicpix.app</a> and we'll get back to you as soon as we can.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 <span style="color:var(--pink)">flic</span><span style="color:var(--blue)">pix</span></p>
+    <div class="footer-links">
+      <a href="/support">Support</a>
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
